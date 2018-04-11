@@ -1,0 +1,14 @@
+<h1>Edit Employee</h1>
+
+<ul>
+  <% if flash[:errors].length > 0 %>
+    <% flash[:errors].each do |e| %>
+      <li> <%= e %> </li>
+    <% end %>
+  <% end %>
+</ul>
+
+<%= render "form" %>
+<%= form_tag employee_path(@employee), method: "delete" do %>
+  <%= submit_tag "Delete Employee" %>
+<% end %>

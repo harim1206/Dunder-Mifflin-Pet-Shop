@@ -1,0 +1,12 @@
+<%= form_for @dog do |f| %>
+  <%= f.label :name %><br/>
+  <%= f.text_field :name %><br/>
+  <%= f.label :breed %><br/>
+  <%= f.text_field :breed %><br/>
+  <%= f.label :age %><br/>
+  <%= f.text_field :age %><br/>
+
+  <label>Employees:</label><br/>
+  <%= f.collection_check_boxes(:employee_ids, @employees, :id, :first_name) %><br/>
+  <%= f.submit %>
+<% end %>
